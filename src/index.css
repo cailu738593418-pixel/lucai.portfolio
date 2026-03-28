@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@300;400;700&family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "PingFang SC", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", "PingFang SC", sans-serif;
+  --font-mono: "JetBrains Mono", "PingFang SC", monospace;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-gt: "Libre Baskerville", serif;
+}
+
+@layer components {
+  .title-hero {
+    @apply text-5xl md:text-7xl font-display font-bold tracking-tighter uppercase leading-none text-black;
+  }
+
+  .title-hero-d3 {
+    @apply text-4xl md:text-6xl font-display font-bold tracking-[0.6em] uppercase leading-tight text-black;
+  }
+
+  .title-section {
+    @apply text-2xl md:text-3xl font-display font-bold tracking-tight uppercase text-black;
+  }
+
+  .title-section-small {
+    @apply text-lg md:text-xl font-display font-bold tracking-tight uppercase text-black;
+  }
+
+  .title-section-d3 {
+    @apply text-xl md:text-2xl font-display font-bold tracking-[0.5em] uppercase text-black;
+  }
+
+  .title-meta {
+    @apply text-[10px] font-mono tracking-[0.3em] uppercase text-black/40;
+  }
+
+  .title-intro {
+    @apply text-lg leading-relaxed font-serif italic text-black/80;
+  }
+
+  .title-body {
+    @apply text-sm leading-relaxed font-sans text-black/50 whitespace-pre-wrap;
+  }
+
+  .title-card {
+    @apply text-[12px] font-sans font-bold tracking-tight uppercase text-black;
+  }
+
+  .title-card-d3 {
+    @apply text-[14px] font-display font-bold tracking-widest uppercase text-black;
+  }
+
+  .title-card-desc {
+    @apply text-[11px] font-sans font-medium tracking-tight text-black/70;
+  }
+}
