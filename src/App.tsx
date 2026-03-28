@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { motion, useMotionValue, useSpring, useTransform, AnimatePresence, useScroll } from 'motion/react';
+import { motion, useMotionValue, useSpring, useTransform, AnimatePresence, useScroll } from 'framer-motion';
 import { X, Search, User, ChevronLeft, ChevronRight, Mail, Phone, Calendar, MapPin, Award, BookOpen, Briefcase, GraduationCap, Heart, Star, Upload, MousePointer2 } from 'lucide-react';
 
 // --- Types ---
