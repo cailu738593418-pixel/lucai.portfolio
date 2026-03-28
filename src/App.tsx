@@ -326,7 +326,7 @@ const PROJECTS: Project[] = [
           'https://img.heliar.top/file/1774442478917_0两张IP插画_画板_1_副本.jpg',
           'https://img.heliar.top/file/1774442481628_0两张IP插画_画板_1.jpg'
         ],
-        aspect: 'aspect-[3508/4961]',
+        aspect: 'aspect-[3509/4961]',
         maxWidth: 'max-w-md'
       },
       { 
@@ -762,12 +762,12 @@ const PosterFlip = ({
         </AnimatePresence>
         
         {/* Hint for next poster */}
-        <div className={`absolute -right-24 md:-right-28 top-1/2 -translate-y-1/2 opacity-100 transition-opacity duration-300`}>
+        <div className={`absolute right-4 md:-right-28 top-1/2 -translate-y-1/2 opacity-100 transition-opacity duration-300`}>
           <div className="flex flex-col items-center gap-3">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-black flex items-center justify-center bg-white shadow-md">
-              <ChevronRight className="w-6 h-6 md:w-7 h-7" />
+            <div className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-black flex items-center justify-center bg-white shadow-md">
+              <ChevronRight className="w-5 h-5 md:w-7 h-7" />
             </div>
-            <span className="title-meta font-bold text-black whitespace-nowrap text-[10px] md:text-xs uppercase tracking-[0.2em]">{nextText}</span>
+            <span className="title-meta font-bold text-black whitespace-nowrap text-[8px] md:text-xs uppercase tracking-[0.2em]">{nextText}</span>
           </div>
         </div>
       </div>
@@ -908,7 +908,7 @@ const ProjectDetail = ({ project, onClose, onNavigate }: { project: Project; onC
         )}
 
         {/* Section 2+: Immersive Content (Gallery) */}
-        <div className={`w-full ${project.id === 'd3' ? 'space-y-24 md:space-y-32' : 'space-y-20 md:space-y-40'} pb-40`}>
+        <div className={`w-full ${project.id === 'd3' ? 'space-y-4 md:space-y-6' : 'space-y-20 md:space-y-40'} pb-40`}>
           {/* For FOUNTAIN 2023, we show the book as the first item in the gallery section */}
           {project.id === 'fountain-2023' && (
             <div className="w-full px-0">
@@ -1061,11 +1061,10 @@ const ProjectDetail = ({ project, onClose, onNavigate }: { project: Project; onC
             )}
           </div>
 
-          {/* Render interactiveMockups if they exist */}
           {project.interactiveMockups && (
-            <div className={`max-w-screen-xl mx-auto px-8 md:px-20 ${project.id === 'd3' ? 'space-y-24 md:space-y-32' : 'space-y-40'}`}>
+            <div className={`max-w-screen-xl mx-auto px-8 md:px-20 ${project.id === 'd3' ? 'space-y-4 md:space-y-6' : 'space-y-40'}`}>
               <div className="space-y-16">
-                <div className={`${project.id === 'd3' ? 'space-y-24 md:space-y-32' : 'space-y-32'}`}>
+                <div className={`${project.id === 'd3' ? 'space-y-4 md:space-y-6' : 'space-y-32'}`}>
                   {project.interactiveMockups.map((mockup, mIdx) => (
                     <div 
                       key={mIdx} 
@@ -1099,12 +1098,11 @@ const ProjectDetail = ({ project, onClose, onNavigate }: { project: Project; onC
             </div>
           )}
 
-          {/* Render finishedProductDisplay if it exists */}
           {project.finishedProductDisplay && (
-            <div className={`max-w-screen-xl mx-auto px-8 md:px-20 ${project.id === 'd3' ? 'space-y-24 md:space-y-32' : 'space-y-16'}`}>
+            <div className={`max-w-screen-xl mx-auto px-8 md:px-20 ${project.id === 'd3' ? 'space-y-4 md:space-y-6' : 'space-y-16'}`}>
               <SectionHeader title="FINISHED PRODUCT DISPLAY" subtitle="Final Deliverables" />
-              <div className={`flex flex-col ${project.id === 'd3' ? 'gap-24 md:gap-32 items-center' : 'gap-20'}`}>
-                <div className={`grid ${project.id === 'd3' ? 'gap-24 md:gap-32 grid-cols-1 max-w-5xl' : 'gap-8 grid-cols-1 md:grid-cols-2 w-full'}`}>
+              <div className={`flex flex-col ${project.id === 'd3' ? 'gap-4 md:gap-6 items-center' : 'gap-20'}`}>
+                <div className={`grid ${project.id === 'd3' ? 'gap-4 md:gap-6 grid-cols-1 max-w-5xl' : 'gap-8 grid-cols-1 md:grid-cols-2 w-full'}`}>
                   {project.finishedProductDisplay.map((img, idx) => (
                     <div key={idx} className={`w-full bg-black/5 rounded-sm overflow-hidden ${project.id === 'd3' ? 'aspect-auto' : 'aspect-video'}`}>
                       <img 
@@ -1174,7 +1172,7 @@ const ResearchSection = ({ project }: { project: Project }) => {
   if (!assets) return null;
 
   return (
-    <div className={`w-full ${project.id === 'd3' ? 'space-y-24 md:space-y-32' : 'space-y-40 md:space-y-64'} bg-white text-black`}>
+    <div className={`w-full ${project.id === 'd3' ? 'space-y-8 md:space-y-12' : 'space-y-40 md:space-y-64'} bg-white text-black`}>
       {/* 01. Context Analysis - Vertical Layout */}
       <section className="max-w-screen-2xl mx-auto px-8 md:px-20">
         <div className="space-y-24 md:space-y-32">
@@ -1241,8 +1239,7 @@ const ResearchSection = ({ project }: { project: Project }) => {
         </div>
       </section>
 
-      {/* 03.5 IP & Vehicle Functions - Technical Specs */}
-      <section className="w-full bg-[#f2f7b8] py-40 text-black">
+      <section className={`w-full bg-[#f2f7b8] ${project.id === 'd3' ? 'py-12' : 'py-40'} text-black`}>
         <div className="max-w-screen-2xl mx-auto px-8 md:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 md:gap-32">
             <div className="space-y-24 md:space-y-32">
