@@ -439,15 +439,15 @@ const PROJECTS: Project[] = [
 
 const MenuItems = ({ className = "", onNavigate }: { className?: string; onNavigate?: (view: ViewState) => void }) => {
   const items: { label: string; view: ViewState; rotate: number; mt?: string }[] = [
-    { label: 'home', view: 'home', rotate: -2 },
-    { label: 'GRAPHIC DESIGN', view: 'GRAPHIC DESIGN', rotate: 1 },
-    { label: 'DIGITAL MEDIA DESIGN', view: 'DIGITAL MEDIA DESIGN', rotate: -1 },
-    { label: 'AIGC DESIGN · WAITING', view: 'AIGC DESIGN · WAITING', rotate: 2, mt: 'mt-[2px]' },
-    { label: 'MY  PAGE', view: 'mypage', rotate: -1 },
+    { label: 'home', view: 'home', rotate: -3 },
+    { label: 'GRAPHIC DESIGN', view: 'GRAPHIC DESIGN', rotate: 2 },
+    { label: 'MEDIA DESIGN', view: 'DIGITAL MEDIA DESIGN', rotate: -2 },
+    { label: 'AIGC DESIGN', view: 'AIGC DESIGN · WAITING', rotate: 3, mt: 'mt-[2px]' },
+    { label: 'MY  PAGE', view: 'mypage', rotate: -2 },
   ];
 
   return (
-    <div className={`flex flex-col gap-1 ${className}`}>
+    <div className={`flex flex-col items-start gap-1 md:gap-2 ${className}`}>
       {items.map((item, i) => (
         <motion.button
           key={item.view}
@@ -465,7 +465,7 @@ const MenuItems = ({ className = "", onNavigate }: { className?: string; onNavig
           }}
           whileTap={{ scale: 0.95 }}
           onClick={() => onNavigate?.(item.view)}
-          className={`px-4 py-1 border border-black rounded-full bg-white title-meta !text-[9px] hover:border-black transition-colors w-fit shadow-sm pointer-events-auto text-black uppercase ${item.mt || ''}`}
+          className={`px-4 py-1 md:px-6 md:py-2 border border-black rounded-full bg-white title-meta !text-[9px] md:!text-[11px] hover:border-black transition-colors w-fit shadow-sm pointer-events-auto text-black uppercase ${item.mt || ''}`}
         >
           {item.label}
         </motion.button>
@@ -481,14 +481,10 @@ const Navbar = ({ onNavigate, currentView, onProjectClose, isProjectOpen }: { on
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[300] px-8 py-6 pointer-events-none">
-      <div className="flex justify-between items-start w-full">
+    <nav className="fixed top-0 left-0 w-full z-[300] px-8 py-6 md:px-10 md:py-8 pointer-events-none">
+      <div className="flex justify-start items-start w-full">
         {/* Left Menu */}
         <MenuItems onNavigate={handleNavigate} />
-
-        <div className="flex gap-4 pointer-events-auto">
-          {/* Top Right Logo Removed as per request */}
-        </div>
       </div>
     </nav>
   );
@@ -1693,6 +1689,31 @@ const ArtworkCard: React.FC<{ project: Project; onSelect: (p: Project) => void }
       className="absolute cursor-pointer overflow-visible group"
     >
       {renderContent()}
+      
+      {/* Project Info Tooltip */}
+      <AnimatePresence>
+        {isHovered && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, x: '-50%' }}
+            animate={{ opacity: 1, y: 0, x: '-50%' }}
+            exit={{ opacity: 0, y: 10, x: '-50%' }}
+            className="absolute top-full left-1/2 mt-4 bg-white border border-black p-4 shadow-2xl z-[100] w-64 pointer-events-none text-center"
+          >
+            <div className="space-y-2">
+              <h3 className="text-xs font-bold uppercase tracking-tighter text-black">{project.title}</h3>
+              <div className="h-[1px] w-8 bg-black/20 mx-auto" />
+              <p className="text-[9px] font-mono text-black/60 uppercase tracking-widest leading-tight">
+                {project.description}
+              </p>
+              <div className="pt-1">
+                <span className="text-[8px] font-mono text-black/30 tracking-widest">{project.year}</span>
+              </div>
+            </div>
+            {/* Small arrow */}
+            <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-t border-l border-black rotate-45" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };
@@ -1890,9 +1911,9 @@ const MyPage = () => {
               <motion.h2 
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className="text-7xl md:text-9xl font-display font-bold tracking-tighter uppercase leading-none"
+                className="font-display font-bold tracking-tighter uppercase leading-none"
               >
-                蔡露<span className="text-2xl md:text-4xl ml-4 opacity-50 font-mono tracking-[0.3em]">（LU CAI）</span>
+                <span className="text-5xl md:text-7xl">蔡露</span><span className="text-2xl md:text-4xl ml-4 opacity-50 font-mono tracking-[0.3em]">（LU CAI）</span>
               </motion.h2>
               <p className="text-sm md:text-lg font-mono tracking-[0.3em] text-black/40 uppercase">Communication Designer / Digital Media Artist</p>
             </div>
@@ -2045,12 +2066,13 @@ export default function App() {
   const mouseY = useMotionValue(0);
 
   // Spring physics for smooth movement
-  const springConfig = { stiffness: 60, damping: 25, mass: 1 };
+  const springConfig = { stiffness: 35, damping: 35, mass: 1 };
   
   // Create smooth movement based on mouse position
-  // We transform the mouse position (-0.5 to 0.5) to a movement range (e.g., -400 to 400)
-  const smoothX = useSpring(useTransform(mouseX, [-0.5, 0.5], [400, -400]), springConfig);
-  const smoothY = useSpring(useTransform(mouseY, [-0.5, 0.5], [300, -300]), springConfig);
+  // We transform the mouse position (-0.5 to 0.5) to a movement range
+  // Reduced range for more control and precision
+  const smoothX = useSpring(useTransform(mouseX, [-0.5, 0.5], [250, -250]), springConfig);
+  const smoothY = useSpring(useTransform(mouseY, [-0.5, 0.5], [150, -150]), springConfig);
   const smoothRotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [15, -15]), springConfig);
   const smoothRotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-15, 15]), springConfig);
 
