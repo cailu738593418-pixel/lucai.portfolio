@@ -1603,15 +1603,15 @@ const CategoryView = ({ category, onSelect }: { category: string; onSelect: (p: 
 
 // Fixed positions for home page to match reference image exactly
 const FIXED_POSITIONS: Record<string, { x: number; y: number; z: number; rotate: number; scale: number; width?: number; height?: number; borderRadius?: string; backgroundColor?: string }> = {
-  'g5': { x: -500, y: -350, z: 20, rotate: -15, scale: 0.8, width: 220, height: 220 },      // Top Left
-  'g4': { x: 550, y: -380, z: 40, rotate: 10, scale: 0.8, width: 280, height: 280 },        // Top Right (Shrink)
-  'fountain-2023': { x: 0, y: -420, z: 60, rotate: -5, scale: 0.9, width: 240, height: 240 }, // Top Mid
+  'g5': { x: -500, y: -300, z: 20, rotate: -15, scale: 0.8, width: 220, height: 220 },      // Top Left
+  'g4': { x: 550, y: -320, z: 40, rotate: 10, scale: 0.8, width: 280, height: 280 },        // Top Right (Shrink)
+  'fountain-2023': { x: 0, y: -360, z: 60, rotate: -5, scale: 0.9, width: 240, height: 240 }, // Top Mid
   'd3': { x: -650, y: 0, z: 30, rotate: 5, scale: 0.9, width: 300, height: 300 },           // Mid Left (Shrink)
   'plant-manipulation': { x: 0, y: 0, z: 50, rotate: 0, scale: 0.9, width: 260, height: 260 }, // Center (Shrink)
   'd2': { x: 650, y: 80, z: 70, rotate: -10, scale: 1.0, width: 240, height: 240 },         // Mid Right
-  'g1': { x: -550, y: 380, z: 10, rotate: 15, scale: 0.9, width: 220, height: 220 },        // Bot Left
-  'd6': { x: 0, y: 450, z: 15, rotate: -8, scale: 0.8, width: 260, height: 260 },          // Bot Mid (Shrink)
-  'd5': { x: 550, y: 400, z: 25, rotate: 12, scale: 0.8, width: 220, height: 220 },         // Bot Right
+  'g1': { x: -550, y: 230, z: 10, rotate: 15, scale: 0.9, width: 220, height: 220 },        // Bot Left
+  'd6': { x: 0, y: 300, z: 15, rotate: -8, scale: 0.8, width: 260, height: 260 },          // Bot Mid (Shrink)
+  'd5': { x: 550, y: 250, z: 25, rotate: 12, scale: 0.8, width: 220, height: 220 },         // Bot Right
   'a1': { x: -300, y: -200, z: 5, rotate: -20, scale: 0.7, width: 180, height: 180 },       // Staggered
 };
 
@@ -1674,6 +1674,7 @@ const ArtworkCard: React.FC<{ project: Project; onSelect: (p: Project) => void }
         scale: pos.scale,
         width: pos.width || 256,
         height: pos.height || 192,
+        zIndex: isHovered ? 1000 : 1,
       }}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: pos.scale }}
@@ -1694,10 +1695,10 @@ const ArtworkCard: React.FC<{ project: Project; onSelect: (p: Project) => void }
       <AnimatePresence>
         {isHovered && (
           <motion.div
-            initial={{ opacity: 0, y: 10, x: '-50%' }}
+            initial={{ opacity: 0, y: pos.y > 200 ? -10 : 10, x: '-50%' }}
             animate={{ opacity: 1, y: 0, x: '-50%' }}
-            exit={{ opacity: 0, y: 10, x: '-50%' }}
-            className="absolute top-full left-1/2 mt-4 bg-white border border-black p-4 shadow-2xl z-[100] w-64 pointer-events-none text-center"
+            exit={{ opacity: 0, y: pos.y > 200 ? -10 : 10, x: '-50%' }}
+            className={`absolute ${pos.y > 200 ? 'bottom-full mb-4' : 'top-full mt-4'} left-1/2 bg-white border border-black p-4 shadow-2xl z-[100] w-64 pointer-events-none text-center`}
           >
             <div className="space-y-2">
               <h3 className="text-xs font-bold uppercase tracking-tighter text-black">{project.title}</h3>
@@ -1710,7 +1711,7 @@ const ArtworkCard: React.FC<{ project: Project; onSelect: (p: Project) => void }
               </div>
             </div>
             {/* Small arrow */}
-            <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-t border-l border-black rotate-45" />
+            <div className={`absolute ${pos.y > 200 ? '-bottom-1.5 border-b border-r' : '-top-1.5 border-t border-l'} left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-black rotate-45`} />
           </motion.div>
         )}
       </AnimatePresence>
