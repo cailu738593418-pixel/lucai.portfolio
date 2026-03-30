@@ -31,7 +31,7 @@
   }
 
   .title-meta {
-    @apply text-[10px] font-mono tracking-[0.3em] uppercase text-black/40;
+    @apply text-[10px] font-mono tracking-[0.3em] uppercase text-black/60;
   }
 
   .title-intro {
@@ -39,7 +39,7 @@
   }
 
   .title-body {
-    @apply text-sm leading-relaxed font-sans text-black/50 whitespace-pre-wrap;
+    @apply text-sm leading-relaxed font-sans text-black/70 whitespace-pre-wrap;
   }
 
   .title-card {
