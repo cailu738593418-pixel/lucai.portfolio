@@ -1684,9 +1684,9 @@ const getProjectPos = (id: string, isMobile?: boolean) => {
     // We compress X significantly and adjust Y to cluster icons more tightly
     return {
       ...basePos,
-      x: basePos.x * 0.35, 
-      y: basePos.y * 1.3, // Reduced from 2.2 to cluster vertically and reduce whitespace
-      scale: basePos.scale * 0.9, // Increased from 0.75 to make icons slightly larger
+      x: basePos.x * 0.4, 
+      y: basePos.y * 1.4, 
+      scale: basePos.scale * 1.1, // Increased from 0.9 to make icons larger
     };
   }
   
@@ -2172,21 +2172,19 @@ export default function App() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [mouseX, mouseY]);
 
-  // Pan handler for mobile drag-to-move
+  // Pan handler for mobile - changed to positional parallax to match web feel
   const handlePan = (_event: any, info: any) => {
     if (!isMobile) return;
     
-    const { delta } = info;
-    // Sensitivity adjustment for mobile drag
-    const sensitivity = 0.0015;
+    const { innerWidth, innerHeight } = window;
+    // Map touch position to -0.5 to 0.5 range, with a slight multiplier for more range
+    const multiplier = 1.4;
+    const targetX = ((info.point.x / innerWidth) - 0.5) * multiplier;
+    const targetY = ((info.point.y / innerHeight) - 0.5) * multiplier;
     
-    const newX = mouseX.get() - delta.x * sensitivity;
-    const newY = mouseY.get() - delta.y * sensitivity;
-    
-    // Allow slightly more range on mobile to explore the scaled-down scene
     const limit = 0.8;
-    mouseX.set(Math.max(-limit, Math.min(limit, newX)));
-    mouseY.set(Math.max(-limit, Math.min(limit, newY)));
+    mouseX.set(Math.max(-limit, Math.min(limit, targetX)));
+    mouseY.set(Math.max(-limit, Math.min(limit, targetY)));
   };
 
   return (
@@ -2244,7 +2242,7 @@ export default function App() {
                   style={{
                     x: smoothX,
                     y: smoothY,
-                    scale: isMobile ? 0.55 : 1, // Increased from 0.45 to show icons larger while keeping ~80% visible
+                    scale: isMobile ? 0.65 : 1, // Increased from 0.55 to make icons larger
                   }}
                   className="relative w-0 h-0 flex items-center justify-center overflow-visible"
                 >
@@ -2289,7 +2287,7 @@ export default function App() {
         animate={{ opacity: 0.3 }}
         className="fixed bottom-8 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase pointer-events-none font-mono text-center w-full px-4"
       >
-        {isMobile ? "Drag to explore • Tap to interact" : "Move mouse to explore • Click to interact"}
+        {isMobile ? "Touch to explore • Tap to interact" : "Move mouse to explore • Click to interact"}
       </motion.div>
     </div>
   );
