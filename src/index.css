@@ -9,6 +9,27 @@
   --font-gt: "Libre Baskerville", serif;
 }
 
+@layer base {
+  html, body {
+    @apply bg-white text-black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Fix for iOS momentum scrolling */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix for older Safari transform issues */
+  .preserve-3d {
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
 @layer components {
   .title-hero {
     @apply text-3xl md:text-7xl font-display font-bold tracking-tighter uppercase leading-none text-black;

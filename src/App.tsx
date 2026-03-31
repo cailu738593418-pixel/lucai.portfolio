@@ -567,6 +567,9 @@ const Book: React.FC<{ project: Project }> = ({ project }) => {
             width: pageWidth * 2, 
             height: pageHeight,
             perspective: '3000px',
+            WebkitPerspective: '3000px',
+            transformStyle: 'preserve-3d',
+            WebkitTransformStyle: 'preserve-3d'
           }}
         >
           {/* Clickable areas */}
@@ -619,6 +622,8 @@ const Book: React.FC<{ project: Project }> = ({ project }) => {
                     className="w-full h-full object-cover block" 
                     alt={`page ${i * 2}`}
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                   {/* Page Shadow Overlay */}
                   <motion.div 
@@ -637,6 +642,8 @@ const Book: React.FC<{ project: Project }> = ({ project }) => {
                     className="w-full h-full object-cover block" 
                     alt={`page ${i * 2 + 1}`}
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                   {/* Page Shadow Overlay */}
                   <motion.div 
@@ -766,6 +773,8 @@ const PosterFlip = ({
               alt={`${title} ${currentIndex}`}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
+              loading="lazy"
+              decoding="async"
             />
             {/* Paper Texture Overlay */}
             <div className="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/10 pointer-events-none" />
@@ -906,6 +915,8 @@ const ProjectDetail = ({ project, onClose, onNavigate }: { project: Project; onC
                       alt={project.title} 
                       className={`w-full ${project.id === 'd2' ? 'h-auto object-cover' : (project.id === 'plant-manipulation' ? 'h-full object-cover' : (project.id === 'd3' ? 'h-full object-contain' : 'h-full object-contain'))} ${project.id === 'd3' ? '' : 'drop-shadow-2xl'}`} 
                       referrerPolicy="no-referrer" 
+                      loading="eager"
+                      decoding="async"
                     />
                   ) : (
                     <div className={`w-full h-full flex items-center justify-center ${project.id === 'plant-manipulation' ? 'bg-transparent' : 'bg-black/5'} rounded-sm`}>
@@ -1409,6 +1420,8 @@ const ResearchSection = ({ project }: { project: Project }) => {
                          alt={p.name} 
                          className="w-full h-full object-cover transition-all duration-700"
                          referrerPolicy="no-referrer"
+                         loading="lazy"
+                         decoding="async"
                       />
                     </div>
                     <div className="space-y-4">
@@ -1532,6 +1545,8 @@ const CategoryView = ({ category, onSelect }: { category: string; onSelect: (p: 
                   alt={project.title} 
                   className="w-full h-full object-contain transition-all duration-700"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
                 
                 {/* Badges from reference */}
@@ -1720,6 +1735,8 @@ const ArtworkCard: React.FC<{
           alt={project.title} 
           className="w-full h-full object-contain drop-shadow-2xl" 
           referrerPolicy="no-referrer" 
+          loading="lazy"
+          decoding="async"
         />
       </div>
     );
@@ -1954,7 +1971,7 @@ const MyPage = () => {
           Portfolio
         </h1>
       </div>
-      <div className="w-full max-w-[1920px] mx-auto bg-white border-t-2 border-black min-h-screen">
+      <div className="w-full max-w-[1920px] mx-auto bg-white border-t-2 border-black min-h-screen min-h-[100dvh]">
         <div className="max-w-screen-xl mx-auto px-8 md:px-20 py-24 space-y-24">
         {/* Header Section */}
         <header className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
@@ -2153,14 +2170,26 @@ export default function App() {
 
   // Spring physics for smooth movement
   const springConfig = { stiffness: 35, damping: 35, mass: 1 };
+  const mobileSpringConfig = { stiffness: 70, damping: 25, mass: 1 }; // More sensitive/snappy for mobile
   
   // Create smooth movement based on mouse position
   // We transform the mouse position (-0.5 to 0.5) to a movement range
   // Reduced range for more control and precision
-  const smoothX = useSpring(useTransform(mouseX, [-0.5, 0.5], [250, -250]), springConfig);
-  const smoothY = useSpring(useTransform(mouseY, [-0.5, 0.5], [150, -150]), springConfig);
-  const smoothRotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [15, -15]), springConfig);
-  const smoothRotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-15, 15]), springConfig);
+  const smoothXDesktop = useSpring(useTransform(mouseX, [-0.5, 0.5], [250, -250]), springConfig);
+  const smoothYDesktop = useSpring(useTransform(mouseY, [-0.5, 0.5], [150, -150]), springConfig);
+  const smoothXMobile = useSpring(useTransform(mouseX, [-0.5, 0.5], [250, -250]), mobileSpringConfig);
+  const smoothYMobile = useSpring(useTransform(mouseY, [-0.5, 0.5], [150, -150]), mobileSpringConfig);
+  
+  const smoothX = isMobile ? smoothXMobile : smoothXDesktop;
+  const smoothY = isMobile ? smoothYMobile : smoothYDesktop;
+
+  const smoothRotateXDesktop = useSpring(useTransform(mouseY, [-0.5, 0.5], [15, -15]), springConfig);
+  const smoothRotateYDesktop = useSpring(useTransform(mouseX, [-0.5, 0.5], [-15, 15]), springConfig);
+  const smoothRotateXMobile = useSpring(useTransform(mouseY, [-0.5, 0.5], [15, -15]), mobileSpringConfig);
+  const smoothRotateYMobile = useSpring(useTransform(mouseX, [-0.5, 0.5], [-15, 15]), mobileSpringConfig);
+
+  const smoothRotateX = isMobile ? smoothRotateXMobile : smoothRotateXDesktop;
+  const smoothRotateY = isMobile ? smoothRotateYMobile : smoothRotateYDesktop;
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -2178,7 +2207,7 @@ export default function App() {
     
     const { delta } = info;
     // Sensitivity for direct drag feel - further increased for even better responsiveness
-    const sensitivity = 0.006;
+    const sensitivity = 0.012;
     
     // To make icons move WITH the finger (natural drag):
     // Finger moves right (delta.x > 0) -> Icons move right (smoothX increases)
@@ -2193,7 +2222,7 @@ export default function App() {
   };
 
   return (
-    <div className={`relative w-full ${view === 'home' && !selectedProject ? 'h-screen overflow-hidden' : 'min-h-screen'} bg-white text-black font-sans selection:bg-black selection:text-white`}>
+    <div className={`relative w-full ${view === 'home' && !selectedProject ? 'h-screen h-[100dvh] overflow-hidden' : 'min-h-screen min-h-[100dvh]'} bg-white text-black font-sans selection:bg-black selection:text-white`}>
       <Navbar onNavigate={(v) => setView(v)} currentView={view} onProjectClose={() => setSelectedProject(null)} isProjectOpen={!!selectedProject} />
 
       <AnimatePresence mode="wait">
