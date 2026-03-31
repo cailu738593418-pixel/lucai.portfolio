@@ -122,7 +122,7 @@ const PROJECTS: Project[] = [
     year: '2026',
     description: 'Book Design, Posters and Exhibition Design',
     longDescription: 'No Boundary Within approaches “loss of control” as a structural condition, defining it not as formal randomness or disorder, but as the fissure that emerges when institutional narratives fail to fully encompass lived experience.\n\nSituated within the context of migrant eviction in the UK, the project does not attempt to directly represent acts of eviction. Instead, it examines how their visual outcomes are constructed and circulated. Through the juxtaposition and analysis of news imagery and traces of dwelling within urban space, it reveals how eviction is rendered de-causalised and naturalised at the level of visual representation, thereby obscuring the institutional logics that underpin it.\n\nMethodologically, the project draws upon the critical compositional strategies of Jan van Toorn, employing obstruction, layering, and the deferral of information to construct a stratified visual hierarchy. The double-layered poster operates as the primary medium, distributing content across multiple surfaces and interrupting linear modes of reading, such that viewing becomes a process of active recognition and reconstruction.\n\nHere, “obstruction” is not deployed as a formal device, but functions as a structural operation that intervenes in the production of meaning. By regulating the relationship between the visible and the concealed, the project exposes how images construct reality through processes of selection and omission, while simultaneously rendering the gradual erasure of lived experience within institutional narratives perceptible.\n\nRather than offering resolution, the project seeks to recalibrate modes of viewing through visual intervention—shifting the image from an object of passive reception to one open to questioning and reinterpretation, and in doing so, reopening the conditions through which structure itself may be recognised.',
-    image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCA4MDAgMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNlNWU1ZTUiLz4KICA8ZyBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMC41Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iMTAwIiB4Mj0iODAwIiB5Mj0iMTAwIiAvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIyMDAiIHgyPSI4MDAiIHkyPSIyMDAiIC8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjMwMCIgeDI9IjgwMCIgeTI9IjMwMCIgLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNDAwIiB4Mj0iODAwIiB5Mj0iNDAwIiAvPgogICAgPGxpbmUgeDE9IjAiIHkxPSI1MDAiIHgyPSI4MDAiIHkyPSI1MDAiIC8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjYwMCIgeDI9IjgwMCIgeTI9IjYwMCIgLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNzAwIiB4Mj0iODAwIiB5Mj0iNzAwIiAvPgogICAgPGxpbmUgeDE9IjAiIHkxPSI4MDAiIHgyPSI4MDAiIHkyPSI4MDAiIC8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjkwMCIgeDI9IjgwMCIgeTI9IjkwMCIgLz4KICAgIDxsaW5lIHgxPSIxMDAiIHkxPSIwIiB4Mj0iMTAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSIyMDAiIHkxPSIwIiB4Mj0iMjAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSIzMDAiIHkxPSIwIiB4Mj0iMzAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSI1MDAiIHkxPSIwIiB4Mj0iNTAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSI2MDAiIHkxPSIwIiB4Mj0iNjAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSI3MDAiIHkxPSIwIiB4Mj0iNzAwIiB5Mj0iMTAwMCIgLz4KICA8L2c+CiAgPHJlY3QgeD0iMTUwIiB5PSI0MDAiIHdpZHRoPSI1MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDx0ZXh0IHg9IjQwMCIgeT0iNDkwIiBmYW50LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjgiIGZpbGw9ImJsYWNrIj5DT01JTkcgU09PTjwvdGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjU1MCIgZmFudC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMTIiIGZpbGw9IiM5OTkiPuaVrOivt+acn+W+hDwvdGV4dD4KPC9zdmc+',
+    image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCA4MDAgMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNlNWU1ZTUiLz48ZyBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMC41Ij48bGluZSB4MT0iMCIgeTE9IjEwMCIgeDI9IjgwMCIgeTI9IjEwMCIgLz48bGluZSB4MT0iMCIgeTE9IjIwMCIgeDI9IjgwMCIgeTI9IjIwMCIgLz48bGluZSB4MT0iMCIgeTE9IjMwMCIgeDI9IjgwMCIgeTI9IjMwMCIgLz48bGluZSB4MT0iMCIgeTE9IjQwMCIgeDI9IjgwMCIgeTI9IjQwMCIgLz48bGluZSB4MT0iMCIgeTE9IjUwMCIgeDI9IjgwMCIgeTI9IjUwMCIgLz48bGluZSB4MT0iMCIgeTE9IjYwMCIgeDI9IjgwMCIgeTI9IjYwMCIgLz48bGluZSB4MT0iMCIgeTE9IjcwMCIgeDI9IjgwMCIgeTI9IjcwMCIgLz48bGluZSB4MT0iMCIgeTE9IjgwMCIgeDI9IjgwMCIgeTI9IjgwMCIgLz48bGluZSB4MT0iMCIgeTE9IjkwMCIgeDI9IjgwMCIgeTI9IjkwMCIgLz48bGluZSB4MT0iMTAwIiB5MT0iMCIgeDI9IjEwMCIgeTI9IjEwMDAiIC8+PGxpbmUgeDE9IjIwMCIgeTE9IjAiIHgyPSIyMDAiIHkyPSIxMDAwIiAvPjxsaW5lIHgxPSIzMDAiIHkxPSIwIiB4Mj0iMzAwIiB5Mj0iMTAwMCIgLz48bGluZSB4MT0iNDAwIiB5MT0iMCIgeDI9IjQwMCIgeTI9IjEwMDAiIC8+PGxpbmUgeDE9IjUwMCIgeTE9IjAiIHgyPSI1MDAiIHkyPSIxMDAwIiAvPjxsaW5lIHgxPSI2MDAiIHkxPSIwIiB4Mj0iNjAwIiB5Mj0iMTAwMCIgLz48bGluZSB4MT0iNzAwIiB5MT0iMCIgeDI9IjcwMCIgeTI9IjEwMDAiIC8+PC9nPjxyZWN0IHg9IjE1MCIgeT0iNDAwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz48dGV4dCB4PSI0MDAiIHk9IjQ5MCIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjQ4IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSI4IiBmaWxsPSJibGFjayI+Q09NSU5HIFNPT048L3RleHQ+PHRleHQgeD0iNDAwIiB5PSI1NTAiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEyIiBmaWxsPSIjOTk5Ij7mlazor7fmnJ/lvoU8L3RleHQ+PC9zdmc+',
     gallery: [],
     type: 'framed',
     isUnderConstruction: true,
@@ -441,7 +441,7 @@ const PROJECTS: Project[] = [
     year: '2026',
     description: 'Motion Poster Design',
     longDescription: '',
-    image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCA4MDAgMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNlNWU1ZTUiLz4KICA8ZyBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMC41Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iMTAwIiB4Mj0iODAwIiB5Mj0iMTAwIiAvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIyMDAiIHgyPSI4MDAiIHkyPSIyMDAiIC8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjMwMCIgeDI9IjgwMCIgeTI9IjMwMCIgLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNDAwIiB4Mj0iODAwIiB5Mj0iNDAwIiAvPgogICAgPGxpbmUgeDE9IjAiIHkxPSI1MDAiIHgyPSI4MDAiIHkyPSI1MDAiIC8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjYwMCIgeDI9IjgwMCIgeTI9IjYwMCIgLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNzAwIiB4Mj0iODAwIiB5Mj0iNzAwIiAvPgogICAgPGxpbmUgeDE9IjAiIHkxPSI4MDAiIHgyPSI4MDAiIHkyPSI4MDAiIC8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjkwMCIgeDI9IjgwMCIgeTI9IjkwMCIgLz4KICAgIDxsaW5lIHgxPSIxMDAiIHkxPSIwIiB4Mj0iMTAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSIyMDAiIHkxPSIwIiB4Mj0iMjAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSIzMDAiIHkxPSIwIiB4Mj0iMzAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSI1MDAiIHkxPSIwIiB4Mj0iNTAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSI2MDAiIHkxPSIwIiB4Mj0iNjAwIiB5Mj0iMTAwMCIgLz4KICAgIDxsaW5lIHgxPSI3MDAiIHkxPSIwIiB4Mj0iNzAwIiB5Mj0iMTAwMCIgLz4KICA8L2c+CiAgPHJlY3QgeD0iMTUwIiB5PSI0MDAiIHdpZHRoPSI1MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDx0ZXh0IHg9IjQwMCIgeT0iNDkwIiBmYW50LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtc3R5bGU9Iml0YWxpYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjgiIGZpbGw9ImJsYWNrIj5DT01JTkcgU09PTjwvdGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjU1MCIgZmFudC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMTIiIGZpbGw9IiM5OTkiPuaVrOivt+acn+W+hDwvdGV4dD4KPC9zdmc+',
+    image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCA4MDAgMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNlNWU1ZTUiLz48ZyBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMC41Ij48bGluZSB4MT0iMCIgeTE9IjEwMCIgeDI9IjgwMCIgeTI9IjEwMCIgLz48bGluZSB4MT0iMCIgeTE9IjIwMCIgeDI9IjgwMCIgeTI9IjIwMCIgLz48bGluZSB4MT0iMCIgeTE9IjMwMCIgeDI9IjgwMCIgeTI9IjMwMCIgLz48bGluZSB4MT0iMCIgeTE9IjQwMCIgeDI9IjgwMCIgeTI9IjQwMCIgLz48bGluZSB4MT0iMCIgeTE9IjUwMCIgeDI9IjgwMCIgeTI9IjUwMCIgLz48bGluZSB4MT0iMCIgeTE9IjYwMCIgeDI9IjgwMCIgeTI9IjYwMCIgLz48bGluZSB4MT0iMCIgeTE9IjcwMCIgeDI9IjgwMCIgeTI9IjcwMCIgLz48bGluZSB4MT0iMCIgeTE9IjgwMCIgeDI9IjgwMCIgeTI9IjgwMCIgLz48bGluZSB4MT0iMCIgeTE9IjkwMCIgeDI9IjgwMCIgeTI9IjkwMCIgLz48bGluZSB4MT0iMTAwIiB5MT0iMCIgeDI9IjEwMCIgeTI9IjEwMDAiIC8+PGxpbmUgeDE9IjIwMCIgeTE9IjAiIHgyPSIyMDAiIHkyPSIxMDAwIiAvPjxsaW5lIHgxPSIzMDAiIHkxPSIwIiB4Mj0iMzAwIiB5Mj0iMTAwMCIgLz48bGluZSB4MT0iNDAwIiB5MT0iMCIgeDI9IjQwMCIgeTI9IjEwMDAiIC8+PGxpbmUgeDE9IjUwMCIgeTE9IjAiIHgyPSI1MDAiIHkyPSIxMDAwIiAvPjxsaW5lIHgxPSI2MDAiIHkxPSIwIiB4Mj0iNjAwIiB5Mj0iMTAwMCIgLz48bGluZSB4MT0iNzAwIiB5MT0iMCIgeDI9IjcwMCIgeTI9IjEwMDAiIC8+PC9nPjxyZWN0IHg9IjE1MCIgeT0iNDAwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz48dGV4dCB4PSI0MDAiIHk9IjQ5MCIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjQ4IiBmb250LXN0eWxlPSJpdGFsaWMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSI4IiBmaWxsPSJibGFjayI+Q09NSU5HIFNPT048L3RleHQ+PHRleHQgeD0iNDAwIiB5PSI1NTAiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEyIiBmaWxsPSIjOTk5Ij7mlazor7fmnJ/lvoU8L3RleHQ+PC9zdmc+',
     gallery: [],
     type: 'framed',
   }
@@ -1631,33 +1631,79 @@ const FIXED_POSITIONS: Record<string, { x: number; y: number; z: number; rotate:
 };
 
 // Helper to get position for home page
-const getProjectPos = (id: string) => {
-  if (FIXED_POSITIONS[id]) {
-    return FIXED_POSITIONS[id];
-  }
-  
-  // Fallback to seeded random if ID not in fixed list
-  const seed = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  const random = (s: number) => {
-    const x = Math.sin(s) * 10000;
-    return x - Math.floor(x);
-  };
-  
-  return {
-    x: (random(seed) - 0.5) * 1400,
-    y: (random(seed + 1) - 0.5) * 900,
-    z: random(seed + 2) * 100,
-    rotate: (random(seed + 3) - 0.5) * 60,
-    scale: 0.4 + random(seed + 4) * 0.8,
+const getProjectPos = (id: string, isMobile?: boolean) => {
+  const basePos = FIXED_POSITIONS[id] || {
+    // Fallback to seeded random if ID not in fixed list
+    x: (() => {
+      const seed = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+      const random = (s: number) => {
+        const x = Math.sin(s) * 10000;
+        return x - Math.floor(x);
+      };
+      return (random(seed) - 0.5) * 1400;
+    })(),
+    y: (() => {
+      const seed = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+      const random = (s: number) => {
+        const x = Math.sin(s) * 10000;
+        return x - Math.floor(x);
+      };
+      return (random(seed + 1) - 0.5) * 900;
+    })(),
+    z: (() => {
+      const seed = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+      const random = (s: number) => {
+        const x = Math.sin(s) * 10000;
+        return x - Math.floor(x);
+      };
+      return random(seed + 2) * 100;
+    })(),
+    rotate: (() => {
+      const seed = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+      const random = (s: number) => {
+        const x = Math.sin(s) * 10000;
+        return x - Math.floor(x);
+      };
+      return (random(seed + 3) - 0.5) * 60;
+    })(),
+    scale: (() => {
+      const seed = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+      const random = (s: number) => {
+        const x = Math.sin(s) * 10000;
+        return x - Math.floor(x);
+      };
+      return 0.4 + random(seed + 4) * 0.8;
+    })(),
     width: 256,
     height: 192,
     backgroundColor: 'transparent'
   };
+
+  if (isMobile) {
+    // Transform horizontal rectangle to vertical rectangle for mobile
+    // We compress X significantly and adjust Y to cluster icons more tightly
+    return {
+      ...basePos,
+      x: basePos.x * 0.35, 
+      y: basePos.y * 1.3, // Reduced from 2.2 to cluster vertically and reduce whitespace
+      scale: basePos.scale * 0.9, // Increased from 0.75 to make icons slightly larger
+    };
+  }
+  
+  return basePos;
 };
 
-const ArtworkCard: React.FC<{ project: Project; onSelect: (p: Project) => void }> = ({ project, onSelect }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const pos = getProjectPos(project.id);
+const ArtworkCard: React.FC<{ 
+  project: Project; 
+  onSelect: (p: Project) => void; 
+  isMobile?: boolean;
+  activeProjectId?: string | null;
+  setActiveProjectId?: (id: string | null) => void;
+}> = ({ project, onSelect, isMobile, activeProjectId, setActiveProjectId }) => {
+  const [isHoveredLocal, setIsHoveredLocal] = useState(false);
+  const pos = getProjectPos(project.id, isMobile);
+  
+  const isHovered = isMobile ? activeProjectId === project.id : isHoveredLocal;
 
   const renderContent = () => {
     return (
@@ -1693,15 +1739,26 @@ const ArtworkCard: React.FC<{ project: Project; onSelect: (p: Project) => void }
       }}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: pos.scale }}
-      whileHover={{ 
+      whileHover={!isMobile ? { 
         z: pos.z + 50, 
         scale: pos.scale * 1.05,
         rotateZ: pos.rotate * 0.8, // Slight rotation adjustment on hover
         transition: { type: 'spring', stiffness: 300, damping: 20 }
+      } : {}}
+      onHoverStart={() => !isMobile && setIsHoveredLocal(true)}
+      onHoverEnd={() => !isMobile && setIsHoveredLocal(false)}
+      onClick={(e) => {
+        e.stopPropagation();
+        if (isMobile) {
+          if (isHovered) {
+            onSelect(project);
+          } else {
+            setActiveProjectId?.(project.id);
+          }
+        } else {
+          onSelect(project);
+        }
       }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      onClick={() => onSelect(project)}
       className="absolute cursor-pointer overflow-visible group"
     >
       {renderContent()}
@@ -2077,7 +2134,18 @@ const MyPage = () => {
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [view, setView] = useState<ViewState>('home');
+  const [isMobile, setIsMobile] = useState(false);
+  const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Mouse parallax values
   const mouseX = useMotionValue(0);
@@ -2103,6 +2171,23 @@ export default function App() {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [mouseX, mouseY]);
+
+  // Pan handler for mobile drag-to-move
+  const handlePan = (_event: any, info: any) => {
+    if (!isMobile) return;
+    
+    const { delta } = info;
+    // Sensitivity adjustment for mobile drag
+    const sensitivity = 0.0015;
+    
+    const newX = mouseX.get() - delta.x * sensitivity;
+    const newY = mouseY.get() - delta.y * sensitivity;
+    
+    // Allow slightly more range on mobile to explore the scaled-down scene
+    const limit = 0.8;
+    mouseX.set(Math.max(-limit, Math.min(limit, newX)));
+    mouseY.set(Math.max(-limit, Math.min(limit, newY)));
+  };
 
   return (
     <div className={`relative w-full ${view === 'home' && !selectedProject ? 'h-screen overflow-hidden' : 'min-h-screen'} bg-white text-black font-sans selection:bg-black selection:text-white`}>
@@ -2149,14 +2234,17 @@ export default function App() {
               </div>
 
               {/* 3D Scene Container */}
-              <div 
+              <motion.div 
                 ref={containerRef}
-                className="relative w-full h-full flex items-center justify-center overflow-visible"
+                onPan={handlePan}
+                onClick={() => isMobile && setActiveProjectId(null)}
+                className="relative w-full h-full flex items-center justify-center overflow-visible touch-none"
               >
                 <motion.div
                   style={{
                     x: smoothX,
                     y: smoothY,
+                    scale: isMobile ? 0.55 : 1, // Increased from 0.45 to show icons larger while keeping ~80% visible
                   }}
                   className="relative w-0 h-0 flex items-center justify-center overflow-visible"
                 >
@@ -2165,10 +2253,13 @@ export default function App() {
                       key={project.id} 
                       project={project} 
                       onSelect={(p) => setSelectedProject(p)} 
+                      isMobile={isMobile}
+                      activeProjectId={activeProjectId}
+                      setActiveProjectId={setActiveProjectId}
                     />
                   ))}
                 </motion.div>
-              </div>
+              </motion.div>
             </div>
           </motion.section>
         ) : view === 'mypage' ? (
@@ -2196,9 +2287,9 @@ export default function App() {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.3 }}
-        className="fixed bottom-8 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase pointer-events-none font-mono"
+        className="fixed bottom-8 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase pointer-events-none font-mono text-center w-full px-4"
       >
-        Move mouse to explore • Click to interact
+        {isMobile ? "Drag to explore • Tap to interact" : "Move mouse to explore • Click to interact"}
       </motion.div>
     </div>
   );
