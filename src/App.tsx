@@ -2177,8 +2177,8 @@ export default function App() {
     if (!isMobile) return;
     
     const { delta } = info;
-    // Sensitivity for direct drag feel
-    const sensitivity = 0.0025;
+    // Sensitivity for direct drag feel - further increased for even better responsiveness
+    const sensitivity = 0.006;
     
     // To make icons move WITH the finger (natural drag):
     // Finger moves right (delta.x > 0) -> Icons move right (smoothX increases)
