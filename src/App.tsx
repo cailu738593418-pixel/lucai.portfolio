@@ -1684,9 +1684,9 @@ const getProjectPos = (id: string, isMobile?: boolean) => {
     // We compress X significantly and adjust Y to cluster icons more tightly
     return {
       ...basePos,
-      x: basePos.x * 0.4, 
-      y: basePos.y * 1.4, 
-      scale: basePos.scale * 1.1, // Increased from 0.9 to make icons larger
+      x: basePos.x * 0.45, // Slightly wider than before to accommodate larger icons
+      y: basePos.y * 1.5, 
+      scale: basePos.scale * 1.2, // Increased from 1.1 to make icons larger
     };
   }
   
@@ -2172,19 +2172,24 @@ export default function App() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [mouseX, mouseY]);
 
-  // Pan handler for mobile - changed to positional parallax to match web feel
+  // Pan handler for mobile - direct drag where icons follow the finger
   const handlePan = (_event: any, info: any) => {
     if (!isMobile) return;
     
-    const { innerWidth, innerHeight } = window;
-    // Map touch position to -0.5 to 0.5 range, with a slight multiplier for more range
-    const multiplier = 1.4;
-    const targetX = ((info.point.x / innerWidth) - 0.5) * multiplier;
-    const targetY = ((info.point.y / innerHeight) - 0.5) * multiplier;
+    const { delta } = info;
+    // Sensitivity for direct drag feel
+    const sensitivity = 0.0025;
     
-    const limit = 0.8;
-    mouseX.set(Math.max(-limit, Math.min(limit, targetX)));
-    mouseY.set(Math.max(-limit, Math.min(limit, targetY)));
+    // To make icons move WITH the finger (natural drag):
+    // Finger moves right (delta.x > 0) -> Icons move right (smoothX increases)
+    // smoothX increases when mouseX decreases (due to the transform [-0.5, 0.5] -> [250, -250])
+    const newX = mouseX.get() - delta.x * sensitivity;
+    const newY = mouseY.get() - delta.y * sensitivity;
+    
+    // Allow more range for exploration
+    const limit = 1.2;
+    mouseX.set(Math.max(-limit, Math.min(limit, newX)));
+    mouseY.set(Math.max(-limit, Math.min(limit, newY)));
   };
 
   return (
@@ -2242,7 +2247,7 @@ export default function App() {
                   style={{
                     x: smoothX,
                     y: smoothY,
-                    scale: isMobile ? 0.65 : 1, // Increased from 0.55 to make icons larger
+                    scale: isMobile ? 0.75 : 1, // Increased from 0.65 to make icons larger
                   }}
                   className="relative w-0 h-0 flex items-center justify-center overflow-visible"
                 >
@@ -2287,7 +2292,7 @@ export default function App() {
         animate={{ opacity: 0.3 }}
         className="fixed bottom-8 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase pointer-events-none font-mono text-center w-full px-4"
       >
-        {isMobile ? "Touch to explore • Tap to interact" : "Move mouse to explore • Click to interact"}
+        {isMobile ? "Drag to explore • Tap to interact" : "Move mouse to explore • Click to interact"}
       </motion.div>
     </div>
   );
